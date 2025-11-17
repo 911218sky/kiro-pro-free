@@ -391,5 +391,5 @@ Create a GitHub Issue with:
 
 ---
 
-**Last Updated**: January 17, 2025  
+**Last Updated**: November 17, 2025  
 **Version**: 1.0.0

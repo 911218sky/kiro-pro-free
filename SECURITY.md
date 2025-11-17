@@ -226,7 +226,7 @@ This tool is provided "as is" for educational purposes. Users are responsible fo
 
 ---
 
-**Last Updated**: January 17, 2025  
+**Last Updated**: November 17, 2025  
 **Version**: 1.0.0
 
 Thank you for helping keep Kiro Pro Free secure! 🔒

@@ -82,4 +82,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 **Note**: This list is updated regularly. If you've contributed and don't see your name, please open an issue!
 
-Last Updated: January 17, 2025
+Last Updated: November 17, 2025

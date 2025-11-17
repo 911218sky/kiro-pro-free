@@ -31,6 +31,26 @@ This project demonstrates software bypass techniques for learning purposes. By u
 
 ---
 
+## 🔬 Compatibility Status
+
+**Current Status**: ⚠️ **PARTIALLY COMPATIBLE** with Kiro 0.5.9
+
+### What Works ✅
+- ✅ **Machine ID Reset** - Generates new device identifiers
+- ✅ **Auto-Update Disable** - Prevents Kiro updates
+
+### What Doesn't Work ❌
+- ❌ **Token Limit Bypass** - Kiro uses different code patterns than Cursor
+- ❌ **UI Modifications** - Different UI structure
+
+### Why?
+Kiro's internal code differs from Cursor IDE. While both are VSCode forks, they use different function names and patterns. See [COMPATIBILITY_REPORT.md](COMPATIBILITY_REPORT.md) for full analysis.
+
+### Help Wanted! 🤝
+We need community help to identify Kiro-specific patterns. See [Contributing](CONTRIBUTING.md).
+
+---
+
 ## 🚀 Quick Start
 
 ```bash
@@ -164,8 +184,7 @@ MIT License - See [LICENSE](LICENSE)
 
 ## 🙏 Credits
 
-- **Original**: [Cursor Free VIP](https://github.com/yeongpin/cursor-free-vip) by yeongpin
-- **Author**: [Aanan Ahmad](https://github.com/iamaanahmad)
+- **Author**: [Amaan Ahmad](https://github.com/iamaanahmad)
 - **Contributors**: [CONTRIBUTORS.md](CONTRIBUTORS.md)
 
 ---
@@ -187,6 +206,6 @@ Authors not liable for misuse.
 
 ⭐ Star if helpful! | [Report Issue](https://github.com/iamaanahmad/kiro-pro-free/issues)
 
-**Version 1.0.0** | January 2025
+**Version 1.0.0** | November 2025
 
 </div>

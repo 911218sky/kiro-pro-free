@@ -3,7 +3,6 @@ Kiro IDE Configuration Module
 Adapted from Cursor Free VIP project for Kiro IDE
 """
 import os
-import sys
 import configparser
 import platform
 from colorama import Fore, Style

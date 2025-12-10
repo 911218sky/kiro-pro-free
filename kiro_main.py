@@ -58,55 +58,13 @@ def print_menu():
     """Print main menu"""
     print(f"\n{Fore.CYAN}{EMOJI['MENU']} Main Menu:{Style.RESET_ALL}")
     print(f"{Fore.YELLOW}{'─' * 60}{Style.RESET_ALL}")
-    print(f"{Fore.GREEN}1{Style.RESET_ALL}. {EMOJI['RESET']} Reset Machine ID {Fore.GREEN}(✓ Working){Style.RESET_ALL}")
-    print(f"{Fore.GREEN}2{Style.RESET_ALL}. {EMOJI['ROCKET']} Bypass Token Limit {Fore.YELLOW}(⚠️ Limited){Style.RESET_ALL}")
-    print(f"{Fore.GREEN}3{Style.RESET_ALL}. {EMOJI['SETTINGS']} Disable Auto-Update {Fore.GREEN}(✓ Working){Style.RESET_ALL}")
+    print(f"{Fore.GREEN}1{Style.RESET_ALL}. {EMOJI['RESET']} Reset Machine ID")
+    print(f"{Fore.GREEN}2{Style.RESET_ALL}. {EMOJI['ROCKET']} Bypass Token Limit")
+    print(f"{Fore.GREEN}3{Style.RESET_ALL}. {EMOJI['SETTINGS']} Disable Auto-Update")
     print(f"{Fore.GREEN}4{Style.RESET_ALL}. {EMOJI['INFO']} Verify Kiro Installation")
     print(f"{Fore.GREEN}5{Style.RESET_ALL}. {EMOJI['SETTINGS']} Show Configuration")
-    print(f"{Fore.GREEN}6{Style.RESET_ALL}. {EMOJI['INFO']} Compatibility Status")
     print(f"{Fore.GREEN}0{Style.RESET_ALL}. {EMOJI['EXIT']} Exit")
     print(f"{Fore.YELLOW}{'─' * 60}{Style.RESET_ALL}")
-
-def show_compatibility_status():
-    """Show detailed compatibility information"""
-    print(f"\n{Fore.CYAN}{'='*60}{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}{EMOJI['INFO']} Kiro Bypass Compatibility Status{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
-    
-    print(f"{Fore.YELLOW}Current Status: Partially Compatible with Kiro 0.5.9{Style.RESET_ALL}\n")
-    
-    print(f"{Fore.GREEN}✅ What Works:{Style.RESET_ALL}")
-    print(f"  • Machine ID Reset - Generates new device identifiers")
-    print(f"  • Auto-Update Disable - Prevents Kiro updates")
-    print(f"  • Configuration Management - Path detection and setup")
-    print(f"  • Backup System - Automatic file backups")
-    
-    print(f"\n{Fore.YELLOW}⚠️ What Has Limited Support:{Style.RESET_ALL}")
-    print(f"  • Token Limit Bypass - Kiro uses different code patterns")
-    print(f"  • UI Modifications - Different UI structure than Cursor")
-    
-    print(f"\n{Fore.CYAN}Why Some Features Don't Work:{Style.RESET_ALL}")
-    print(f"  • Kiro is a different fork of VSCode than Cursor")
-    print(f"  • Function names and code patterns are different")
-    print(f"  • Token management system uses different implementation")
-    
-    print(f"\n{Fore.GREEN}Recommended Usage:{Style.RESET_ALL}")
-    print(f"  1. Use Machine ID Reset (Option 1) - Fully functional")
-    print(f"  2. Use Auto-Update Disable (Option 3) - Fully functional")
-    print(f"  3. Try Token Bypass Pattern Discovery (Option 2) - For research")
-    
-    print(f"\n{Fore.CYAN}How to Help:{Style.RESET_ALL}")
-    print(f"  • Use Pattern Discovery mode to analyze Kiro's code")
-    print(f"  • Share findings with the community")
-    print(f"  • Contribute working patterns for your Kiro version")
-    
-    print(f"\n{Fore.YELLOW}Safety Notes:{Style.RESET_ALL}")
-    print(f"  • All modifications create automatic backups")
-    print(f"  • Working features are safe to use")
-    print(f"  • Token bypass attempts are non-destructive")
-    
-    print(f"\n{Fore.CYAN}{'='*60}{Style.RESET_ALL}")
-    input(f"{EMOJI['INFO']} Press Enter to continue...")
 
 def verify_installation():
     """Verify Kiro installation"""
@@ -134,7 +92,7 @@ def show_configuration():
     print(f"{Fore.CYAN}Kiro Paths:{Style.RESET_ALL}")
     for key, value in paths.items():
         exists = os.path.exists(value)
-        status = f"{Fore.GREEN}✓{Style.RESET_ALL}" if exists else f"{Fore.RED}✗{Style.RESET_ALL}"
+        status = f"{Fore.GREEN}[OK]{Style.RESET_ALL}" if exists else f"{Fore.RED}[FAIL]{Style.RESET_ALL}"
         print(f"  {status} {key}: {value}")
     
     print(f"\n{Fore.CYAN}{'='*60}{Style.RESET_ALL}")
@@ -197,7 +155,7 @@ def main():
     while True:
         try:
             print_menu()
-            choice = input(f"\n{EMOJI['ARROW']} {Fore.CYAN}Select option (0-6): {Style.RESET_ALL}").strip()
+            choice = input(f"\n{EMOJI['ARROW']} {Fore.CYAN}Select option (0-5): {Style.RESET_ALL}").strip()
             
             if choice == "0":
                 print(f"\n{Fore.YELLOW}{EMOJI['INFO']} Exiting...{Style.RESET_ALL}")
@@ -219,11 +177,8 @@ def main():
             elif choice == "5":
                 show_configuration()
                 
-            elif choice == "6":
-                show_compatibility_status()
-                
             else:
-                print(f"{Fore.RED}{EMOJI['ERROR']} Invalid choice. Please select 0-6.{Style.RESET_ALL}")
+                print(f"{Fore.RED}{EMOJI['ERROR']} Invalid choice. Please select 0-5.{Style.RESET_ALL}")
                 input(f"{EMOJI['INFO']} Press Enter to continue...")
                 
         except KeyboardInterrupt:

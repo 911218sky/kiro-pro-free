@@ -4,14 +4,12 @@ Adapted from Cursor Free VIP project
 Prevents Kiro from auto-updating and detecting modifications
 """
 import os
-import sys
 import shutil
 import subprocess
 import platform
-import tempfile
 import re
 from colorama import Fore, Style, init
-from kiro_config import get_kiro_paths, get_kiro_config
+from kiro_config import get_kiro_paths
 
 init()
 

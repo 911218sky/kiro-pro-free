@@ -38,16 +38,25 @@ This project demonstrates software bypass techniques for learning purposes. By u
 ### What Works ✅
 - ✅ **Machine ID Reset** - Generates new device identifiers
 - ✅ **Auto-Update Disable** - Prevents Kiro updates
+- ✅ **Pattern Discovery** - Analyzes Kiro's code structure
+- ✅ **Configuration Management** - Automatic path detection
+- ✅ **Backup System** - Automatic file backups
 
 ### What Doesn't Work ❌
 - ❌ **Token Limit Bypass** - Kiro uses different code patterns than Cursor
 - ❌ **UI Modifications** - Different UI structure
 
+### What's New 🆕
+- 🔍 **Pattern Analysis** - Identifies potential modification points
+- 📊 **Compatibility Status** - Clear indication of what works
+- 🛠️ **Enhanced Error Handling** - Better feedback when features don't work
+- 🤝 **Community Contribution** - Framework for sharing working patterns
+
 ### Why?
-Kiro's internal code differs from Cursor IDE. While both are VSCode forks, they use different function names and patterns. See [COMPATIBILITY_REPORT.md](COMPATIBILITY_REPORT.md) for full analysis.
+Kiro's internal code differs from Cursor IDE. While both are VSCode forks, they use different function names and patterns. The new pattern discovery mode helps identify what needs to be modified for full compatibility.
 
 ### Help Wanted! 🤝
-We need community help to identify Kiro-specific patterns. See [Contributing](CONTRIBUTING.md).
+We need community help to identify Kiro-specific patterns. Use the Pattern Discovery mode (Option 2 in Token Bypass) to analyze your Kiro installation and share findings.
 
 ---
 
@@ -105,18 +114,26 @@ python kiro_main.py
 ```
 
 **Options:**
-1. Reset Machine ID
-2. Bypass Token Limit
-3. Disable Auto-Update
-4. Verify Installation
-5. Show Configuration
+1. **Reset Machine ID** ✅ - Fully functional
+2. **Bypass Token Limit** ⚠️ - Limited (includes Pattern Discovery)
+3. **Disable Auto-Update** ✅ - Fully functional
+4. **Verify Installation** - Check Kiro installation
+5. **Show Configuration** - Display current settings
+6. **Compatibility Status** - Detailed compatibility info
 
 ### Individual Tools
 ```bash
-python kiro_reset_machine.py
-python kiro_bypass_token_limit.py
-python kiro_disable_auto_update.py
+python kiro_reset_machine.py      # Machine ID reset
+python kiro_bypass_token_limit.py # Token bypass + pattern discovery
+python kiro_disable_auto_update.py # Auto-update disable
 ```
+
+### Pattern Discovery Mode
+When using the Token Bypass tool, choose option 2 for Pattern Discovery:
+- Analyzes Kiro's JavaScript files
+- Identifies potential modification points
+- Shows what patterns exist in your Kiro version
+- Helps community identify working patterns
 
 ---
 
@@ -206,6 +223,6 @@ Authors not liable for misuse.
 
 ⭐ Star if helpful! | [Report Issue](https://github.com/iamaanahmad/kiro-pro-free/issues)
 
-**Version 1.0.0** | November 2025
+**Version 1.1.0** | January 2025
 
 </div>

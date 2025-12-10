@@ -8,7 +8,7 @@ import shutil
 import tempfile
 from colorama import Fore, Style, init
 from datetime import datetime
-from kiro_config import get_kiro_paths, get_kiro_config
+from kiro_config import get_kiro_paths
 
 init()
 
@@ -21,6 +21,7 @@ EMOJI = {
     "RESET": "🔄",
     "WARNING": "⚠️",
 }
+
 
 def backup_file(file_path):
     """Create timestamped backup of file"""
@@ -38,6 +39,7 @@ def backup_file(file_path):
     except Exception as e:
         print(f"{Fore.RED}{EMOJI['ERROR']} Backup failed: {e}{Style.RESET_ALL}")
         return None
+
 
 def modify_workbench_js(file_path):
     """Modify workbench.desktop.main.js to bypass token limits"""

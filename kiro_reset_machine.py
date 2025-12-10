@@ -4,13 +4,11 @@ Adapted from Cursor Free VIP project
 Resets machine identifiers to bypass trial limits
 """
 import os
-import sys
 import json
 import uuid
 import hashlib
 import shutil
 import sqlite3
-import tempfile
 import re
 from colorama import Fore, Style, init
 from datetime import datetime

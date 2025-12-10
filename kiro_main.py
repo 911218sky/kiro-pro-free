@@ -33,7 +33,7 @@ EMOJI = {
     "ROCKET": "🚀",
 }
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 
 def print_logo():
     """Print application logo"""
@@ -92,7 +92,7 @@ def show_configuration():
     print(f"{Fore.CYAN}Kiro Paths:{Style.RESET_ALL}")
     for key, value in paths.items():
         exists = os.path.exists(value)
-        status = f"{Fore.GREEN}✓{Style.RESET_ALL}" if exists else f"{Fore.RED}✗{Style.RESET_ALL}"
+        status = f"{Fore.GREEN}[OK]{Style.RESET_ALL}" if exists else f"{Fore.RED}[FAIL]{Style.RESET_ALL}"
         print(f"  {status} {key}: {value}")
     
     print(f"\n{Fore.CYAN}{'='*60}{Style.RESET_ALL}")

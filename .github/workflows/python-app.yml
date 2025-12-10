@@ -38,8 +38,8 @@ jobs:
     
     - name: Test imports
       run: |
-        python -c "import kiro_config; print('✓ kiro_config imports successfully')"
-        python -c "import kiro_main; print('✓ kiro_main imports successfully')"
-        python -c "import kiro_reset_machine; print('✓ kiro_reset_machine imports successfully')"
-        python -c "import kiro_bypass_token_limit; print('✓ kiro_bypass_token_limit imports successfully')"
-        python -c "import kiro_disable_auto_update; print('✓ kiro_disable_auto_update imports successfully')"
+        python -c "import kiro_config; print('[OK] kiro_config imports successfully')"
+        python -c "import kiro_main; print('[OK] kiro_main imports successfully')"
+        python -c "import kiro_reset_machine; print('[OK] kiro_reset_machine imports successfully')"
+        python -c "import kiro_bypass_token_limit; print('[OK] kiro_bypass_token_limit imports successfully')"
+        python -c "import kiro_disable_auto_update; print('[OK] kiro_disable_auto_update imports successfully')"

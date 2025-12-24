@@ -229,6 +229,6 @@ Authors not liable for misuse.
 
 ⭐ Star if helpful! | [Report Issue](https://github.com/iamaanahmad/kiro-pro-free/issues)
 
-**Version 1.1.0** | January 2025
+**Version 1.1.0** | December 2025
 
 </div>

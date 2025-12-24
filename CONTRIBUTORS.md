@@ -4,7 +4,7 @@ Thank you to everyone who has contributed to Kiro Pro Free! 🎉
 
 ## Project Lead
 
-- **Aanan Ahmad** ([@iamaanahmad](https://github.com/iamaanahmad))
+- **Amaan Ahmad** ([@iamaanahmad](https://github.com/iamaanahmad))
   - Project creator and maintainer
   - Initial implementation and adaptation from Cursor Free VIP
 

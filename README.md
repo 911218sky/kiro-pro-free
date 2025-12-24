@@ -199,6 +199,12 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=iamaanahmad/kiro-pro-free&type=date&legend=top-left)](https://www.star-history.com/#iamaanahmad/kiro-pro-free&type=date&legend=top-left)
+
+---
+
 ## 🙏 Credits
 
 - **Author**: [Amaan Ahmad](https://github.com/iamaanahmad)

@@ -57,10 +57,30 @@ jobs:
         run: |
           git push origin main
 
+      - name: Get latest release version
+        if: steps.check.outputs.has_updates == 'true'
+        id: latest_release
+        run: |
+          # Get latest tag or default to v0.0.0
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          VERSION=${LATEST_TAG#v}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          NEXT_PATCH=$((PATCH + 1))
+          NEW_VERSION="v${MAJOR}.${MINOR}.${NEXT_PATCH}"
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "[INFO] New release version: $NEW_VERSION"
+
+      - name: Create and push new tag
+        if: steps.check.outputs.has_updates == 'true'
+        run: |
+          git tag ${{ steps.latest_release.outputs.new_version }}
+          git push origin ${{ steps.latest_release.outputs.new_version }}
+
       - name: Summary
         run: |
           if [ "${{ steps.check.outputs.has_updates }}" == "true" ]; then
             echo "✅ Synced ${{ steps.check.outputs.upstream_commits }} commits from upstream"
+            echo "✅ Created release ${{ steps.latest_release.outputs.new_version }}"
           else
             echo "✅ No updates from upstream"
           fi

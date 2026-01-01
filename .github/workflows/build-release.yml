@@ -37,6 +37,18 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install UPX (Windows)
+        if: matrix.os == 'windows-latest'
+        run: choco install upx -y
+
+      - name: Install UPX (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get install -y upx
+
+      - name: Install UPX (macOS)
+        if: matrix.os == 'macos-latest'
+        run: brew install upx
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -45,7 +57,28 @@ jobs:
 
       - name: Build executable
         run: |
+          pyinstaller --onefile --name kiro-pro-free --clean --strip --upx-dir /usr/bin kiro_main.py
+        if: matrix.os == 'ubuntu-latest'
+
+      - name: Build executable (Windows)
+        run: |
           pyinstaller --onefile --name kiro-pro-free --clean kiro_main.py
+        if: matrix.os == 'windows-latest'
+
+      - name: Build executable (macOS)
+        run: |
+          pyinstaller --onefile --name kiro-pro-free --clean --strip kiro_main.py
+        if: matrix.os == 'macos-latest'
+
+      - name: Compress with UPX (Windows)
+        if: matrix.os == 'windows-latest'
+        run: upx --best --lzma dist\kiro-pro-free.exe
+        continue-on-error: true
+
+      - name: Compress with UPX (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: upx --best --lzma dist/kiro-pro-free
+        continue-on-error: true
 
       - name: Rename artifact (Windows)
         if: matrix.os == 'windows-latest'

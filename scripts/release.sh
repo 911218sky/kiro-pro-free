@@ -63,9 +63,9 @@ echo ""
 echo "[INFO] New version: $NEW_VERSION"
 echo ""
 
-# Confirm
-read -p "Confirm release $NEW_VERSION? (y/n): " CONFIRM
-if [ "$CONFIRM" != "y" ] && [ "$CONFIRM" != "Y" ]; then
+# Confirm (default: y)
+read -p "Confirm release $NEW_VERSION? [Y/n]: " CONFIRM
+if [ "$CONFIRM" = "n" ] || [ "$CONFIRM" = "N" ]; then
     echo "[INFO] Release cancelled"
     exit 0
 fi

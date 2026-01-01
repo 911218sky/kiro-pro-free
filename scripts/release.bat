@@ -63,9 +63,9 @@ echo.
 echo [INFO] New version: %NEW_VERSION%
 echo.
 
-REM Confirm
-set /p CONFIRM="Confirm release %NEW_VERSION%? (y/n): "
-if /i not "%CONFIRM%"=="y" (
+REM Confirm (default: y)
+set /p CONFIRM="Confirm release %NEW_VERSION%? [Y/n]: "
+if /i "%CONFIRM%"=="n" (
     echo [INFO] Release cancelled
     pause
     exit /b 0

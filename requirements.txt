@@ -3,6 +3,9 @@
 # Terminal colors and formatting
 colorama>=0.4.6
 
+# Build executable (optional, for local builds)
+# pyinstaller>=6.0.0
+
 # Note: Standard library modules used (no additional requirements):
 # - os
 # - sys

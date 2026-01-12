@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - 'v*'
+    branches:
+      - feature/improvements
   workflow_dispatch:
     inputs:
       release_version:
